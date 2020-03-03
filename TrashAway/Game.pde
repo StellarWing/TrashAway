@@ -9,6 +9,8 @@ void game() {
    i++;
   }
   
+  
+  fill(#69D2E7);
   ball();
   paddle();
   
@@ -40,22 +42,17 @@ void ball() {
    bvx = (bx - px)/10;
    bvy = (by - py)/10;
   }
-  if (dist(bx, by, x, y) < 35) {
-   score = score + 1;
-   
-  }
   
   if (by > 600) { 
     lives = lives - 1;
 }
  if (lives == 0) {
+   highscore();
+   lives = 3;
+   px = width/2;
    mode = GAMEOVER;
 }
- if (lives == 0) {
-  score = 0;
-  lives = 3;
-  px = width/2;
- }
+
 }
 void paddle() {
   ellipse(px, py, 100, 100);

@@ -14,15 +14,22 @@ void gameover() {
 void gameOverClicks() {
   
   if (mouseX > 275 && mouseX < 475 && mouseY > 450 && mouseY < 550) {
-   mode = GAME;
+   
+    setup();
+    mode = GAME; 
+
    
   }
   if (mouseX > 275 && mouseX < 475 && mouseY > 250 && mouseY < 350) {
+    
+   setup();
    mode = INTRO;
+   
 }
 }
 void highscore() {
   if (score > highscore) {
     highscore = score;
+    score = 0;
   }
 }

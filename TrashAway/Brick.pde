@@ -1,6 +1,7 @@
-float x, y;
+
 class Brick {
 
+  float x, y;
   color b;
   color g;
   color r;
@@ -20,6 +21,8 @@ class Brick {
       hp = hp - 1;
       bvx = (bx - x)/5; //check for reasonable spp
       bvy = (by - y)/5;
+      
+      score++;
     }
   }
   void show() {
