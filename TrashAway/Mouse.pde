@@ -7,7 +7,9 @@ void mouseReleased() {
     gameOverClicks();
   } else if (mode == PAUSE) {
     pauseClicks();
+  } else if (mode == VICTORY) {
+    victoryClicks();
   } else {
-     println("Mode error");
+    println("Mode error");
   }
 }

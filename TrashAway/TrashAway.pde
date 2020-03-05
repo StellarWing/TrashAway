@@ -31,11 +31,11 @@ void setup() {
 
   sliderx = 200;
   slidery = 200;
-  
+
   score = 0;
   highscore = 0;
   lives = 3;
-  
+
   circlesize = 100;
   ballsize   = 20;
 
@@ -67,30 +67,36 @@ void setup() {
 }
 
 void draw() {
-  if (mode == INTRO) {
-    intro();
+  textSize(500);
 
+  if (mode == INTRO) {
+
+    intro();
+    text("NO", CENTER, CENTER);
+  } else if (mode == GAME) {
     
-  }
-      else if (mode == GAME) {
-      game();
-    } else if (mode == GAMEOVER) {
-      gameover();
-    } else if (mode == PAUSE) {  
-      pause();
-    } else if (mode == VICTORY) {
-      victory();
-    } else {
-      println("?");
-    }
-  
+    game();
+    text("NO", CENTER, CENTER);
+  } else if (mode == GAMEOVER) {
+    gameover();
+    //text("NO", CENTER, CENTER);
+  } else if (mode == PAUSE) {  
+    pause();
+    //text("NO", CENTER, CENTER);
+  } else if (mode == VICTORY) {
+    victory();
+    //text("NO", CENTER, CENTER);
+  //} else {
+  //  println("?");
+  //}
 }
-  //{
-  //    while (y < 300) {
-  //      x = x + 40;
-  //      if (x > width) {
-  //        x = 0;
-  //        y = y + 15;
-  //        
-  //      }
-  //    }
+//{
+//    while (y < 300) {
+//      x = x + 40;
+//      if (x > width) {
+//        x = 0;
+//        y = y + 15;
+//        
+//      }
+//    }
+}

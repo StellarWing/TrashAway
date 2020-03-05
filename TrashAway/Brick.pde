@@ -15,8 +15,11 @@ class Brick {
     b = #69D2E7; //light blue
     g = #03D44C; //green
     r = #E94E77;
+    hp = (int)random(1, 4);
   }
   void act() {
+    
+  
     if (hp > 0 && dist(bx, by, x, y) < 35) {
       hp = hp - 1;
       bvx = (bx - x)/5; //check for reasonable spp

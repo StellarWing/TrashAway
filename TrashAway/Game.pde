@@ -24,7 +24,7 @@ void game() {
   textSize(20);
   text("PAUSE", 723, 577);
   
-  if (score == 48) {
+  if (score == 1) {
    mode = VICTORY; 
   }
 }
