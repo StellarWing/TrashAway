@@ -4,6 +4,7 @@ final int INTRO = 1;
 final int GAME  = 2;
 final int GAMEOVER = 3;
 final int PAUSE = 4;
+final int VICTORY = 5;
 int mode = INTRO;  //1: intro screen, 2: game playing, 3: gameover screen, 4: pause
 
 //ball variable
@@ -19,18 +20,24 @@ int gridx;
 int gridy;
 int score, lives, highscore;
 float sliderx;
+float slidery;
 float circlesize;
+float ballsize;
 
 
 
 void setup() {
   myBricks = new ArrayList<Brick>();
 
-  sliderx= 200;
+  sliderx = 200;
+  slidery = 200;
   
   score = 0;
   highscore = 0;
   lives = 3;
+  
+  circlesize = 100;
+  ballsize   = 20;
 
 
 
@@ -42,7 +49,7 @@ void setup() {
     gridx = gridx + 70;
     if (gridx >= 800) {
       gridx = 0;
-      gridy = gridy + 40;
+      gridy = gridy + 52;
     }
     i++;
   }
@@ -71,6 +78,8 @@ void draw() {
       gameover();
     } else if (mode == PAUSE) {  
       pause();
+    } else if (mode == VICTORY) {
+      victory();
     } else {
       println("?");
     }
